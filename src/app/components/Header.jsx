@@ -1,10 +1,11 @@
 import Link from "next/link";
+import styles from "../styles/header.module.scss";
 
 const Header = () => {
     return(
-        <div className="header">
-            <span className="header_logo">TMDB</span>
-            <nav className="header_nav">
+        <div className={styles.wrap}>
+            <span className={styles.logo}>TMDB</span>
+            <nav className={styles.nav}>
                 <ul>
                     <li>
                         <Link href="/movies">Movies</Link>

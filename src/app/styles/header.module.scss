@@ -1,0 +1,23 @@
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+
+    .logo {
+        font-size: 3em;
+        font-weight: 700;
+    }
+
+    .nav {
+        ul {
+            list-style-type: none;
+
+            > li {
+                display: inline-block;
+                padding: 10px 15px;
+            }
+            
+        }
+    }
+}

@@ -1,9 +1,10 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Header from '@/app/components/Header'
+import Footer from '@/app/components/Footer'
+import styles from '../styles/home.module.scss'
 
 export default function Home() {
   return (
-      <main className="home">
+      <main className={styles.body}>
         
       </main>
   )
