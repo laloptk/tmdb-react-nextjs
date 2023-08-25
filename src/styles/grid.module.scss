@@ -5,3 +5,11 @@
     column-gap: 1%;
     row-gap: 20px;
 }
+
+.actors_grid {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    column-gap: 1%;
+    row-gap: 20px;
+}

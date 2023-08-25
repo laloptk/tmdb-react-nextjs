@@ -7,7 +7,7 @@ const MoviesGrid = ({movies}) => {
         <div className={styles.movies_grid}>
             {
                 movies.map( el => {
-                    return <MovieCard movie={el} />
+                    return <MovieCard movie={el} key={el.id} />
                 })
             }
         </div>

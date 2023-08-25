@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const MovieCard = ({movie}) => {
     return (
@@ -8,10 +9,11 @@ const MovieCard = ({movie}) => {
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                     width={180}
                     height={300}
+                    alt={`${movie.original_title} Poster`}
                 />
             </div>
             <div className="movie-card_info">
-
+                <Link href={`actors/${movie.id}?title=${movie.title}`} >See Movie Cast</Link>
             </div>
         </div>
     )
