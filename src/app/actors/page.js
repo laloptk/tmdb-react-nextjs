@@ -1,3 +1,8 @@
+export const metadata = {
+    title: 'Popular Actors',
+    description: 'Lists all the most popular actors of the moment',
+}
+
 const Actors = () => {
     return (
         <h1>

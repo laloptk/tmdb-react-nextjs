@@ -1,6 +1,7 @@
-import Header from '@/app/components/Header'
-import Footer from '@/app/components/Footer'
-import styles from '../styles/home.module.scss'
+"use client"
+
+import styles from '../styles/home.module.scss';
+import { useTMDBApi } from '@/utils/hooks/useTMDBApi';
 
 export default function Home() {
   return (
