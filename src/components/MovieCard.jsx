@@ -13,7 +13,7 @@ const MovieCard = ({movie}) => {
                 />
             </div>
             <div className="movie-card_info">
-                <Link href={`actors/${movie.id}?title=${movie.title}`} >See Movie Cast</Link>
+                <Link href={`cast/${movie.id}?title=${movie.title}`} >See Movie Cast</Link>
             </div>
         </div>
     )

@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 const Actors = (props) => {
-   const [data, isLoading] = useTMDBApi(`movie/${props.params.id}/credits?language=en-US`);
+   const [data, isLoading] = useTMDBApi(`movie/${props.params.movie_id}/credits?language=en-US`);
    
    return (
         <div>
