@@ -1,9 +1,10 @@
 "use client"
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTMDBApi } from "@/utils/hooks/useTMDBApi";
 import MovieFilters from "@/components/MovieFilters";
 import MoviesGrid from "@/components/MoviesGrid";
+import styles from '../../styles/movies.module.scss';
 
 const Movies = () => {
     const [sorted, setSorted] = useState("popularity.desc");
@@ -14,7 +15,7 @@ const Movies = () => {
     }
     
     return (
-        <div>
+        <div className={styles.wrap}>
             {
                 isLoading === false && 
                     <>
