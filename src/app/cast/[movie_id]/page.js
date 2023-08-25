@@ -1,7 +1,7 @@
 "use client"
 
 import { useTMDBApi } from "@/utils/hooks/useTMDBApi";
-import ActorsGrid from "@/components/ActorsGrid";
+import Grid from "@/components/Grid";
 
 export const metadata = {
     title: 'Movie Cast',
@@ -16,7 +16,7 @@ const Actors = (props) => {
             <h1>{`Cast for "${props.searchParams.title}"`}</h1>
             {
                 isLoading === false &&
-                    <ActorsGrid actors={data.cast} />
+                    <Grid items={data.cast} type="actors" />
             }   
         </div>
     )

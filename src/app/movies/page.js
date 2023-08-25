@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useTMDBApi } from "@/utils/hooks/useTMDBApi";
 import MovieFilters from "@/components/MovieFilters";
-import MoviesGrid from "@/components/MoviesGrid";
+import Grid from "@/components/Grid";
 import styles from '../../styles/movies.module.scss';
 
 const Movies = () => {
@@ -20,7 +20,7 @@ const Movies = () => {
                 isLoading === false && 
                     <>
                         <MovieFilters onChange={handleChange}/>             
-                        <MoviesGrid movies={data.results} />
+                        <Grid items={data.results} type="movies" />
                     </> 
             }
         </div>
