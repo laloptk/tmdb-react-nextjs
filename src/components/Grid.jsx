@@ -3,7 +3,7 @@ import styles from "../styles/grid.module.scss";
 
 const Grid = ({items, type = "movies"}) => {
     return (
-        <div className={styles.movies_grid}>
+        <div className={styles.container}>
             {
                 items.map( item => {
                     return <Card 

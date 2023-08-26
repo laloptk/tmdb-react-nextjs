@@ -15,7 +15,7 @@ const Movies = () => {
     }
     
     return (
-        <div className={styles.wrap}>
+        <div className={styles.container}>
             {
                 isLoading === false && 
                     <>
