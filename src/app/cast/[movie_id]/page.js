@@ -8,18 +8,18 @@ export const metadata = {
     description: 'List all actors that worrked in a movie.',
 }
 
-const Actors = (props) => {
-   const [data, isLoading] = useTMDBApi(`movie/${props.params.movie_id}/credits?language=en-US`);
+const Cast = (props) => {
+   const [data, isLoading] = useTMDBApi(`${props.searchParams.type}/${props.params.movie_id}/credits?language=en-US`);
    
    return (
         <div>
             <h1>{`Cast for "${props.searchParams.title}"`}</h1>
             {
-                isLoading === false &&
-                    <Grid items={data.cast} type="actors" />
+                isLoading === false && 0 !== data.cast.length
+                    && <Grid items={data.cast} type="actors" />
             }   
         </div>
     )
 }
 
-export default Actors;
+export default Cast;

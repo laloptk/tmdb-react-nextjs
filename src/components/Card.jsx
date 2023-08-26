@@ -1,9 +1,11 @@
 import Image from "next/image";
 import MovieInfo from "./MovieInfo";
 import ActorInfo from "./ActorInfo";
+import TvInfo from "./TvInfo";
 
 const Card = ({item, type = "movies"}) => {
-    const poster_uri = `https://image.tmdb.org/t/p/w300${type === "movies" ? item.poster_path : item.profile_path}`;
+    const poster_uri = `https://image.tmdb.org/t/p/w300${(type === "movies" || type === "tv") ? item.poster_path : item.profile_path}`;
+    
     return (
         <div className="movie-card">
             <div className="movie-card_img">
@@ -18,7 +20,9 @@ const Card = ({item, type = "movies"}) => {
                 type === "movies" 
                     ? <MovieInfo item={item} />
                     : type === "actors" 
-                    && <ActorInfo item={item} />
+                    ? <ActorInfo item={item} /> 
+                    : type === "tv" 
+                    && <TvInfo item={item} />
             }
             
         </div>
