@@ -4,7 +4,7 @@ import ActorInfo from "./ActorInfo";
 import TvInfo from "./TvInfo";
 
 const Card = ({item, type = "movies"}) => {
-    const poster_uri = `https://image.tmdb.org/t/p/w300${(type === "movies" || type === "tv") ? item.poster_path : item.profile_path}`;
+    const poster_uri = `https://image.tmdb.org/t/p/original${(type === "movies" || type === "tv") ? item.poster_path : item.profile_path}`;
     
     return (
         <div className="movie-card">
