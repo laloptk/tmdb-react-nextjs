@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export function useTMDBApi(slug, trigger) {
+export function useTMDBApi(slug, trigger = []) {
   const [data, setData] = useState({});
   const [isLoading, setLoading] = useState(null);
 
@@ -41,7 +41,7 @@ export function useTMDBApi(slug, trigger) {
 
     getData();
   
-  }, [trigger]); 
+  }, trigger); 
     
   return [data, isLoading];
 }
