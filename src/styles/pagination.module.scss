@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .prev {
+        color: #000000;
+        font-weight: 700;
+        margin: 0 10px;
+    }
+
+    .next {
+        color: #000000;
+        font-weight: 700;
+        margin: 0 10px;
+    }
+
+    
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .num {
+        display: inline-block;
+        padding: 5px;
+        border: 1px solid #eaeaea;
+        margin: 0 2px;
+
+        &--current {
+            opacity: 0.5;
+        }
+    }
+}
