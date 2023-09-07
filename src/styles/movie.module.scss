@@ -1,0 +1,39 @@
+.container {
+    .wrap {
+        display: flex;
+        max-width: 1048px;
+        margin: 80px auto;
+
+        .companies {
+            ul {
+                display: flex;
+                list-style-type: none;
+                
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100px;
+                    padding: 8px;
+                }
+            }
+        }
+
+        .genres {
+            ul {
+                list-style-type: none;
+                
+                li {
+                    display: inline-block;
+                    margin: 3px;
+                    padding: 5px 8px;
+                    font-weight: 700;
+                    background-color: #eaeaea;
+                    border-radius: 3px;
+                    font-size: 12px;
+                }
+            }
+        }
+    } 
+}

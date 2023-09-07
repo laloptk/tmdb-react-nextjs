@@ -14,7 +14,11 @@ const Pagination = ({page, total_pages, show_pages = 5}) => {
             {
                 total_pages > show_pages &&
                     <div className={styles.prev}>
-                        <Link href={`${pathName}?page=${page - 1}`}>{`<< Previous`}</Link>
+                        <Link 
+                            href={`${pathName}?page=${page - 1}`}
+                        >
+                            {`<< Previous`}
+                        </Link>
                     </div>
             }
 
@@ -23,9 +27,13 @@ const Pagination = ({page, total_pages, show_pages = 5}) => {
                     {
                         pages.map((num, index) => {
                             return <li 
-                                    className={ num === 0 ? `${styles.num} ${styles["num--current"]}` : styles.num}
+                                    className={ num === 0 ? `${styles.num} ${styles["num--current"]}` : styles.num }
                                 >
-                                <Link href={`${pathName}?page=${num + page}`}>{num + page}</Link>
+                                <Link 
+                                    href={`${pathName}?page=${num + page}`}
+                                >
+                                    {num + page}
+                                </Link>
                             </li>
                         })
                     }
@@ -34,7 +42,13 @@ const Pagination = ({page, total_pages, show_pages = 5}) => {
 
             {
                 page <= total_pages &&
-                    <div className={styles.next}><Link href={`${pathName}?page=${page + show_pages}`}>{`Next >>`}</Link></div>
+                    <div className={styles.next}>
+                        <Link 
+                            href={`${pathName}?page=${page + show_pages}`}
+                        >
+                            {`Next >>`}
+                        </Link>
+                    </div>
             }
             
         </div>

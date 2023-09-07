@@ -1,11 +1,11 @@
 "use client"
 
-import { useTMDBApi } from "@/utils/hooks/useTMDBApi";
+import useTMDBApi from "@/utils/hooks/useTMDBApi";
 import Grid from "@/components/Grid";
 
 export const metadata = {
     title: 'Movie Cast',
-    description: 'List all actors that worrked in a movie.',
+    description: 'List all actors that worked in a movie.',
 }
 
 const Cast = (props) => {

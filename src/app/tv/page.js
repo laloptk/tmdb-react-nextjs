@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react";
-import { useTMDBApi } from "@/utils/hooks/useTMDBApi";
+import useTMDBApi from "@/utils/hooks/useTMDBApi";
 import MovieFilters from "@/components/MovieFilters";
 import Grid from "@/components/Grid";
 import Pagination from "@/components/Pagination";

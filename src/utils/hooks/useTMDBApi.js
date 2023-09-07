@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export function useTMDBApi(slug, trigger = []) {
+const useTMDBApi = (slug, trigger = []) => {
   const [data, setData] = useState({});
   const [isLoading, setLoading] = useState(null);
 
@@ -14,7 +14,7 @@ export function useTMDBApi(slug, trigger = []) {
     const controller = new AbortController();
     const uri = `${process.env.NEXT_PUBLIC_TMDB_API_BASE_URI}${slug}`;
     
-    async function getData() {
+    const getData = async () => {
       try {
         setLoading(true);
         
@@ -28,7 +28,6 @@ export function useTMDBApi(slug, trigger = []) {
         });
   
         const res = await response.json();
-        
         setData(res);
         setLoading(false);
 
@@ -45,3 +44,5 @@ export function useTMDBApi(slug, trigger = []) {
     
   return [data, isLoading];
 }
+
+export default useTMDBApi;
